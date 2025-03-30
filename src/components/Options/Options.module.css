@@ -1,0 +1,16 @@
+.wrapper{
+}
+
+.btn__option{
+margin-right: 20px;
+background-color: #00246B;
+color: #CADCFC;
+&:hover{
+  background-color: #F98866;
+  color: #FFF2D7;
+}
+}
+
+.btn__option:last-child{
+  margin-right: 0;
+}
