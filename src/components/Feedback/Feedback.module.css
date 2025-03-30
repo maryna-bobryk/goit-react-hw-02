@@ -1,3 +1,15 @@
-.wrapper{
-  margin-bottom: 20px;
+.tableContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 200px;
+}
+
+th, td {
+  padding: 4px;
+  text-align: left;
 }

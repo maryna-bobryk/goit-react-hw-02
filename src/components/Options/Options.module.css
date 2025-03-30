@@ -1,16 +1,18 @@
 .wrapper{
+  margin-bottom: 42PX;
 }
 
-.btn__option{
+.btnOption{
 margin-right: 20px;
 background-color: #00246B;
 color: #CADCFC;
-&:hover{
+
+  &:hover{
   background-color: #F98866;
   color: #FFF2D7;
 }
 }
 
-.btn__option:last-child{
+.btnOption:last-child{
   margin-right: 0;
 }
