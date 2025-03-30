@@ -11,7 +11,11 @@ const App = () => {
     if (savedFeedback !== null) {
       return savedFeedback;
     }
-    return { good: 0, neutral: 0, bad: 0 };
+    return {
+      good: 0,
+      neutral: 0,
+      bad: 0,
+    };
   });
 
   useEffect(() => {
@@ -31,12 +35,13 @@ const App = () => {
   };
 
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+  const positiveFeedback = Math.round((feedback.good / totalFeedback) * 100);
 
   return (
     <>
       <Description />
       <Options onLeaveFeedback={updateFeedback} onResetFeedback={handleReset} showResetBtn={totalFeedback > 0} />
-      {totalFeedback > 0 ? <Feedback {...feedback} totalFeedback={totalFeedback} /> : <Notification />}
+      {totalFeedback > 0 ? <Feedback {...feedback} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} /> : <Notification />}
     </>
   );
 };

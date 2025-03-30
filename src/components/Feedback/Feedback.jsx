@@ -1,8 +1,6 @@
 import s from './Feedback.module.css';
 
-const Feedback = ({ good, neutral, bad, totalFeedback }) => {
-  const positiveFeedback = Math.round((good / totalFeedback) * 100);
-
+const Feedback = ({ good, neutral, bad, totalFeedback, positiveFeedback }) => {
   return (
     <div className={s.tableContainer}>
       <table>
